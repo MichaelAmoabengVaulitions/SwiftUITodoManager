@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct TaskListView: View {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
+    
     @ObservedObject var taskListVM =  TaskListViewModel()
     @State var presentAddNewItem:Bool = false
     
